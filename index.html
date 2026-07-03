@@ -1,316 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VisoraAI | AI Reading Assistance for Accessible Vision</title>
-  <meta name="description" content="VisoraAI is an assistive AI vision prototype that turns printed text into speech using camera-based OCR, image processing, and text-to-speech." />
-  <meta name="theme-color" content="#08111f" />
 
-  <meta property="og:title" content="VisoraAI | Assistive OCR to Speech" />
-  <meta property="og:description" content="Point a camera at printed text. VisoraAI detects, reads, and speaks it aloud." />
+  <title>VisoraAI | Assistive Camera-Based Reading</title>
+  <meta
+    name="description"
+    content="VisoraAI is an assistive computer vision prototype that detects printed text through a camera and reads it aloud for visually impaired users."
+  />
+
+  <meta name="theme-color" content="#0B0D0F" />
+  <meta property="og:title" content="VisoraAI | Assistive Camera-Based Reading" />
+  <meta property="og:description" content="An assistive computer vision prototype that turns printed text into spoken audio." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.visoraai.com" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header" id="top">
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" data-header>
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="VisoraAI home">
+      <a class="brand" href="index.html" aria-label="VisoraAI home">
         <span class="brand-mark" aria-hidden="true">V</span>
-        <span>VisoraAI</span>
+        <span class="brand-name">VisoraAI</span>
       </a>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-links">
-        <a href="#how-it-works">How it works</a>
-        <a href="#technology">Technology</a>
-        <a href="#features">Features</a>
-        <a href="#research">Research</a>
-        <a href="#roadmap">Roadmap</a>
-        <a class="nav-cta" href="#demo">View demo flow</a>
+      <div class="nav-menu" data-nav-menu>
+        <a href="system.html">System</a>
+        <a href="technology.html">Technology</a>
+        <a href="research.html">Research</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+        <button class="text-button" type="button" data-settings-open>Display</button>
       </div>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Assistive AI Vision · OCR · Text-to-Speech</p>
-        <h1>Point a camera at text. VisoraAI reads it aloud.</h1>
-        <p class="hero-subtitle">
-          VisoraAI is a camera-based reading assistant prototype designed to help visually impaired users access printed text through computer vision, OCR, and spoken audio feedback.
-        </p>
+  <main id="main-content">
+    <section class="home-hero">
+      <div class="container">
+        <div class="home-hero-grid">
+          <div class="home-hero-copy">
+            <p class="eyebrow">Assistive computer vision</p>
+            <h1>Reading printed text through sound.</h1>
+            <p class="lede">
+              VisoraAI is a camera-based reading prototype that uses computer vision and OCR to detect printed text and read it aloud for visually impaired users.
+            </p>
 
-        <div class="hero-actions">
-          <a class="button primary" href="#how-it-works">See how it works</a>
-          <a class="button secondary" href="#technology">Explore the technology</a>
-        </div>
-
-        <div class="trust-row" aria-label="Core technology">
-          <span>Python</span>
-          <span>OpenCV</span>
-          <span>Tesseract OCR</span>
-          <span>gTTS</span>
-          <span>CRNN Research</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal" aria-label="VisoraAI product concept visualization">
-        <div class="device-card">
-          <div class="camera-bar">
-            <span></span>
-            <strong>Live camera feed</strong>
-            <em>READY</em>
-          </div>
-          <div class="scan-window">
-            <div class="paper">
-              <div class="line w-85"></div>
-              <div class="line w-70"></div>
-              <div class="line w-92"></div>
-              <div class="line w-60"></div>
-              <div class="highlight-box"></div>
+            <div class="hero-actions">
+              <a class="primary-link" href="system.html">Explore the system</a>
+              <a class="secondary-link" href="technology.html">View technology</a>
             </div>
-            <div class="scan-beam"></div>
           </div>
-          <div class="audio-panel">
-            <span class="pulse-dot"></span>
-            <p>“Detected text. Reading aloud.”</p>
+
+          <div class="quiet-visual" aria-label="VisoraAI reading flow visualization">
+            <div class="quiet-visual-row">
+              <span>Camera</span>
+              <strong>Input</strong>
+            </div>
+            <div class="quiet-visual-row">
+              <span>OCR</span>
+              <strong>Recognition</strong>
+            </div>
+            <div class="quiet-visual-row">
+              <span>Audio</span>
+              <strong>Speech</strong>
+            </div>
           </div>
         </div>
-
-        <div class="floating-card card-one">
-          <strong>Blur check</strong>
-          <span>Hold steady</span>
-        </div>
-        <div class="floating-card card-two">
-          <strong>Glare check</strong>
-          <span>Tilt page slightly</span>
-        </div>
       </div>
     </section>
 
-    <section class="mission section-shell reveal" id="about">
-      <div>
-        <p class="eyebrow">Mission</p>
-        <h2>Making printed information easier to access.</h2>
-      </div>
-      <p>
-        VisoraAI combines real-time camera input, text-region detection, image enhancement, OCR confidence filtering, and text-to-speech. The goal is to create a practical reading workflow where the system does more than scan: it guides the user toward a clearer image before speaking the result.
-      </p>
-    </section>
-
-    <section class="pipeline section-shell" id="how-it-works">
-      <div class="section-heading reveal">
-        <p class="eyebrow">How it works</p>
-        <h2>From camera frame to spoken text.</h2>
-        <p>VisoraAI uses a layered pipeline so OCR receives the cleanest possible view of the text.</p>
-      </div>
-
-      <div class="timeline">
-        <article class="step-card reveal">
-          <span class="step-number">01</span>
-          <h3>Camera input</h3>
-          <p>A webcam or prototype camera captures live frames of the page or printed material.</p>
-        </article>
-
-        <article class="step-card reveal">
-          <span class="step-number">02</span>
-          <h3>Page detection</h3>
-          <p>The system finds the page region first, reducing background distractions before OCR begins.</p>
-        </article>
-
-        <article class="step-card reveal">
-          <span class="step-number">03</span>
-          <h3>Text block detection</h3>
-          <p>OpenCV morphology identifies the full readable text block instead of relying on the full camera image.</p>
-        </article>
-
-        <article class="step-card reveal">
-          <span class="step-number">04</span>
-          <h3>Image enhancement</h3>
-          <p>The crop is upscaled, contrast-enhanced, denoised, and sharpened to improve character readability.</p>
-        </article>
-
-        <article class="step-card reveal">
-          <span class="step-number">05</span>
-          <h3>Burst capture</h3>
-          <p>Multiple frames are checked for blur and glare, then combined to reduce random noise.</p>
-        </article>
-
-        <article class="step-card reveal">
-          <span class="step-number">06</span>
-          <h3>OCR to speech</h3>
-          <p>Recognized text is cleaned, filtered, split into chunks, and converted into spoken audio.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="technology section-shell" id="technology">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Technology</p>
-        <h2>Built around computer vision and assistive feedback.</h2>
-      </div>
-
-      <div class="tech-grid">
-        <article class="tech-card reveal">
-          <div class="icon-box">CV</div>
-          <h3>Computer Vision</h3>
-          <p>OpenCV handles camera frames, page masks, text-block crops, blur scoring, glare detection, and visual preprocessing.</p>
-        </article>
-
-        <article class="tech-card reveal">
-          <div class="icon-box">OCR</div>
-          <h3>Text Recognition</h3>
-          <p>The OCR path uses a custom recognition pipeline with Tesseract fallback and confidence-based filtering.</p>
-        </article>
-
-        <article class="tech-card reveal">
-          <div class="icon-box">TTS</div>
-          <h3>Speech Output</h3>
-          <p>Recognized text becomes spoken audio, while guidance messages help the user adjust distance, angle, and stability.</p>
-        </article>
-
-        <article class="tech-card reveal">
-          <div class="icon-box">AI</div>
-          <h3>CRNN Research</h3>
-          <p>Experimental OCR research explores a convolutional recurrent neural network with CTC-style decoding.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="features section-shell" id="features">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Features</p>
-        <h2>Designed for real-world reading conditions.</h2>
-      </div>
-
-      <div class="feature-list reveal">
-        <div><span></span> Real-time camera text recognition</div>
-        <div><span></span> Manual scan trigger</div>
-        <div><span></span> Optional auto-scan behavior</div>
-        <div><span></span> Spoken positioning guidance</div>
-        <div><span></span> Blur and glare detection</div>
-        <div><span></span> Distance feedback</div>
-        <div><span></span> Burst-frame capture</div>
-        <div><span></span> Median stacking for cleaner OCR input</div>
-        <div><span></span> OCR confidence filtering</div>
-        <div><span></span> Debug and headless modes for demos</div>
-      </div>
-    </section>
-
-    <section class="research section-shell" id="research">
-      <div class="research-panel reveal">
-        <div>
-          <p class="eyebrow">Research & Development</p>
-          <h2>Testing OCR under imperfect conditions.</h2>
+    <section class="section editorial">
+      <div class="container editorial-grid">
+        <h2>The product idea is intentionally simple.</h2>
+        <div class="copy-stack">
           <p>
-            Real-world OCR is hard because the image can be blurry, tilted, overexposed, or partially framed. VisoraAI’s development focuses on image quality checks, burst processing, synthetic OCR data, and Character Error Rate evaluation.
+            Many everyday materials still assume the reader can clearly see the page. VisoraAI explores a quieter interaction: point a camera at printed text, let the system locate what matters, and hear the result aloud.
+          </p>
+          <p>
+            The site is structured like a project case study, not a generic AI landing page. Each part of the system has its own page so the technical story can grow as the project develops.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="metric-stack" aria-label="Research metrics">
-          <div>
-            <strong>CER</strong>
-            <span>Character Error Rate testing</span>
-          </div>
-          <div>
-            <strong>34</strong>
-            <span>Frames checked per scan burst</span>
-          </div>
-          <div>
-            <strong>CTC</strong>
-            <span>Experimental sequence decoding</span>
-          </div>
+    <section class="section project-index">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">Project areas</p>
+          <h2>Separate pages for the real parts of VisoraAI.</h2>
+        </div>
+
+        <div class="index-list">
+          <a class="index-item" href="system.html">
+            <span>01</span>
+            <div>
+              <h3>System</h3>
+              <p>Camera input, page detection, text localization, enhancement, OCR, and speech output.</p>
+            </div>
+          </a>
+
+          <a class="index-item" href="technology.html">
+            <span>02</span>
+            <div>
+              <h3>Technology</h3>
+              <p>OpenCV processing, burst capture, OCR fallback logic, and text-to-speech architecture.</p>
+            </div>
+          </a>
+
+          <a class="index-item" href="research.html">
+            <span>03</span>
+            <div>
+              <h3>Research</h3>
+              <p>Blur, glare, OCR accuracy, character error rate, and future model experimentation.</p>
+            </div>
+          </a>
+
+          <a class="index-item" href="accessibility.html">
+            <span>04</span>
+            <div>
+              <h3>Accessibility</h3>
+              <p>How spoken feedback, readable defaults, and display controls support the product goal.</p>
+            </div>
+          </a>
+
+          <a class="index-item" href="roadmap.html">
+            <span>05</span>
+            <div>
+              <h3>Roadmap</h3>
+              <p>Future directions: mobile use, offline support, wearable cameras, and multilingual reading.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="demo section-shell" id="demo">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Demo Flow</p>
-        <h2>A simple assistive reading loop.</h2>
-      </div>
-
-      <div class="demo-flow reveal">
-        <div>
-          <span>1</span>
-          <h3>Point at page</h3>
-          <p>The user aims the camera toward printed text.</p>
-        </div>
-        <div>
-          <span>2</span>
-          <h3>Hold steady</h3>
-          <p>VisoraAI checks blur, glare, and distance.</p>
-        </div>
-        <div>
-          <span>3</span>
-          <h3>Reading</h3>
-          <p>The best text crop is enhanced and recognized.</p>
-        </div>
-        <div>
-          <span>4</span>
-          <h3>Speak aloud</h3>
-          <p>The recognized text is converted into audio.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="roadmap section-shell" id="roadmap">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Roadmap</p>
-        <h2>Where VisoraAI can go next.</h2>
-      </div>
-
-      <div class="roadmap-grid">
-        <article class="roadmap-item reveal">
-          <h3>Mobile version</h3>
-          <p>Bring the reading assistant workflow to phones for easier everyday access.</p>
-        </article>
-        <article class="roadmap-item reveal">
-          <h3>Wearable camera support</h3>
-          <p>Explore hands-free use through lightweight camera hardware.</p>
-        </article>
-        <article class="roadmap-item reveal">
-          <h3>Offline speech</h3>
-          <p>Reduce cloud dependency by adding local text-to-speech options.</p>
-        </article>
-        <article class="roadmap-item reveal">
-          <h3>Multilingual OCR</h3>
-          <p>Expand beyond English text recognition and speech output.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta section-shell reveal">
-      <div>
-        <p class="eyebrow">Prototype Status</p>
-        <h2>VisoraAI is a serious assistive OCR prototype.</h2>
-        <p>
-          This project is actively being developed and tested. It is not presented as a finished medical device or a perfect replacement for existing accessibility tools.
+    <section class="section statement-section">
+      <div class="container">
+        <p class="large-statement">
+          VisoraAI is not trying to look like every AI tool. It is built around a specific accessibility problem: making printed text reachable when sight is not enough.
         </p>
       </div>
-      <a class="button primary" href="https://github.com/ARIHANTujjwal/VisoraAI" target="_blank" rel="noopener">View project code</a>
     </section>
   </main>
 
+  <aside class="settings-panel" data-settings-panel aria-hidden="true">
+    <div class="settings-backdrop" data-settings-close></div>
+    <div class="settings-drawer" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <div class="settings-header">
+        <h2 id="settings-title">Display settings</h2>
+        <button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button>
+      </div>
+
+      <div class="settings-controls">
+        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false">
+          <span>
+            <strong>High contrast</strong>
+            <small>Increase text and surface contrast.</small>
+          </span>
+          <b aria-hidden="true"></b>
+        </button>
+
+        <button class="setting-toggle" type="button" data-toggle-text aria-pressed="false">
+          <span>
+            <strong>Larger text</strong>
+            <small>Increase body and interface text size.</small>
+          </span>
+          <b aria-hidden="true"></b>
+        </button>
+
+        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false">
+          <span>
+            <strong>Reduce motion</strong>
+            <small>Disable nonessential animation.</small>
+          </span>
+          <b aria-hidden="true"></b>
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <footer class="footer">
-    <div class="section-shell footer-inner">
-      <a class="brand" href="#top" aria-label="VisoraAI home">
+    <div class="container footer-inner">
+      <a class="brand" href="index.html" aria-label="VisoraAI home">
         <span class="brand-mark" aria-hidden="true">V</span>
-        <span>VisoraAI</span>
+        <span class="brand-name">VisoraAI</span>
       </a>
-      <p>Assistive OCR, computer vision, and text-to-speech research.</p>
-      <a href="#top">Back to top</a>
+      <p>Assistive camera-based reading through computer vision, OCR, and speech.</p>
+      <a href="contact.html">Contact</a>
     </div>
   </footer>
 

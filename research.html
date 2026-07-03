@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | VisoraAI</title>
+  <meta name="description" content="Research challenges behind VisoraAI, including motion blur, glare, OCR accuracy, and character error rate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="research">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" data-header><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button><div class="nav-menu" data-nav-menu><a href="system.html">System</a><a href="technology.html">Technology</a><a href="research.html" aria-current="page">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a><button class="text-button" type="button" data-settings-open>Display</button></div></nav></header>
+  <main id="main-content">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Research</p><h1>Testing OCR where cameras usually fail.</h1><p class="page-lede">VisoraAI is a prototype for studying how camera quality, motion, and image processing affect text recognition and spoken reading output.</p></div></section>
+    <section class="section"><div class="container research-list"><article class="research-item"><span>Challenge</span><h2>Motion blur</h2><p>Handheld camera movement can smear characters before OCR sees them. Burst capture and frame selection help reduce dependence on one unstable image.</p></article><article class="research-item"><span>Challenge</span><h2>Glare and lighting</h2><p>Printed pages often reflect light unevenly. Glare checks and guidance can help the user adjust the page before the system attempts recognition.</p></article><article class="research-item"><span>Evaluation</span><h2>Character-level accuracy</h2><p>OCR quality can be measured by comparing recognized characters against ground truth text. Character Error Rate gives a more precise view than simply asking whether a sentence “looks right.”</p></article><article class="research-item"><span>Future direction</span><h2>Custom OCR model</h2><p>The project also includes experimentation around a CRNN-style OCR model, synthetic training data, character sets, and CTC decoding.</p></article></div></section>
+  </main>
+  <aside class="settings-panel" data-settings-panel aria-hidden="true"><div class="settings-backdrop" data-settings-close></div><div class="settings-drawer" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="settings-header"><h2 id="settings-title">Display settings</h2><button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button></div><div class="settings-controls"><button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button></div></div></aside>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><p>Assistive camera-based reading through computer vision, OCR, and speech.</p><a href="contact.html">Contact</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

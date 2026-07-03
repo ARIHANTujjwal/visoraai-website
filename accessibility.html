@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility | VisoraAI</title>
+  <meta name="description" content="Accessibility approach for VisoraAI, including spoken feedback, camera guidance, readable defaults, and display settings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="accessibility">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" data-header><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button><div class="nav-menu" data-nav-menu><a href="system.html">System</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="accessibility.html" aria-current="page">Accessibility</a><a href="contact.html">Contact</a><button class="text-button" type="button" data-settings-open>Display</button></div></nav></header>
+  <main id="main-content">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Accessibility</p><h1>Access through sound, not more interface.</h1><p class="page-lede">VisoraAI is built around users who may not be able to depend on the screen. The product direction prioritizes spoken reading and practical camera guidance.</p></div></section>
+    <section class="section"><div class="container accessibility-principles"><article><h2>Spoken output first</h2><p>The main output is audio. The point of the system is to convert printed information into spoken language.</p></article><article><h2>Useful camera guidance</h2><p>Feedback such as hold steady, move closer, or reduce glare helps the user improve capture quality without needing to visually inspect the frame.</p></article><article><h2>Readable web defaults</h2><p>The site uses comfortable spacing, readable text, visible keyboard focus, and optional display settings for contrast, text size, and motion.</p></article></div></section>
+  </main>
+  <aside class="settings-panel" data-settings-panel aria-hidden="true"><div class="settings-backdrop" data-settings-close></div><div class="settings-drawer" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="settings-header"><h2 id="settings-title">Display settings</h2><button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button></div><div class="settings-controls"><button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button></div></div></aside>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><p>Assistive camera-based reading through computer vision, OCR, and speech.</p><a href="contact.html">Contact</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

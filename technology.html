@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology | VisoraAI</title>
+  <meta name="description" content="Technical systems used in VisoraAI, including OpenCV, OCR, burst capture, confidence filtering, and text-to-speech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="technology">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" data-header><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button><div class="nav-menu" data-nav-menu><a href="system.html">System</a><a href="technology.html" aria-current="page">Technology</a><a href="research.html">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a><button class="text-button" type="button" data-settings-open>Display</button></div></nav></header>
+  <main id="main-content">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Technology</p><h1>Built around camera uncertainty.</h1><p class="page-lede">The technical work in VisoraAI is not only recognizing text. It is preparing messy camera input so OCR has a better chance of succeeding.</p></div></section>
+    <section class="section"><div class="container tech-page-layout"><div class="tech-sticky"><h2>Core systems</h2><p>Each piece of the pipeline handles a specific failure point in camera-based reading.</p></div><div class="spec-list"><div class="spec-row"><span>Camera handling</span><p>Live camera capture, frame reading, and prototype support across development environments such as laptop webcams or Raspberry Pi-style setups.</p></div><div class="spec-row"><span>Computer vision</span><p>Page detection and text-block localization use image processing to reduce background noise before OCR begins.</p></div><div class="spec-row"><span>Image enhancement</span><p>Upscaling, contrast enhancement, denoising, and sharpening improve the quality of the text crop.</p></div><div class="spec-row"><span>Quality checks</span><p>Blur and glare checks help the system decide when to read and when to ask the user to adjust the camera or page.</p></div><div class="spec-row"><span>Burst capture</span><p>Multiple frames can be captured and compared so the system is not dependent on one blurry or poorly lit frame.</p></div><div class="spec-row"><span>OCR and speech</span><p>OCR extracts text, confidence filtering rejects weak results, and text-to-speech turns recognized text into audio.</p></div></div></div></section>
+    <section class="section statement-section"><div class="container"><p class="large-statement">The technical goal is not to add complexity. It is to make the reading experience simple enough that the user only has to aim the camera and listen.</p></div></section>
+  </main>
+  <aside class="settings-panel" data-settings-panel aria-hidden="true"><div class="settings-backdrop" data-settings-close></div><div class="settings-drawer" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="settings-header"><h2 id="settings-title">Display settings</h2><button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button></div><div class="settings-controls"><button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button><button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button></div></div></aside>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a><p>Assistive camera-based reading through computer vision, OCR, and speech.</p><a href="contact.html">Contact</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
