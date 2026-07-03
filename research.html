@@ -4,47 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | VisoraAI</title>
-  <meta name="description" content="Research focus for VisoraAI OCR accuracy, blur, glare, and character error rate." />
-  <meta name="theme-color" content="#0B0D0F" />
+  <meta name="description" content="Research challenges for VisoraAI: motion blur, glare, burst stacking, OCR accuracy, and Character Error Rate." />
+  <meta name="theme-color" content="#f7fbff" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="top-banner">VisoraAI is a student-built assistive reading prototype. <a href="stack.html">Explore the stack →</a></div>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="VisoraAI home">
-        <span class="brand-mark" aria-hidden="true">V</span>
-        <span class="brand-name">VisoraAI</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
       <div class="nav-menu" data-nav-menu>
-        <a href="index.html">Work</a>
-        <a href="system.html">System</a>
-        <a href="research.html" aria-current="page">Research</a>
-        <a href="contact.html">Contact</a>
+        <a href="stack.html">Stack</a><a href="technology.html">Technology</a><a href="research.html" aria-current="page">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a>
         <button type="button" data-settings-open>Display</button>
       </div>
     </nav>
   </header>
+
   <main id="main-content">
-    <section class="page-hero">
-      <div class="container reveal">
-        <p class="eyebrow">Research</p>
-        <h1>OCR fails before the model ever sees clean text.</h1>
-        <p class="page-lede">VisoraAI is also a research prototype for testing how camera quality, motion blur, glare, and preprocessing affect recognition accuracy.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container research-grid">
-        <article class="research-panel reveal"><img src="assets/research.svg" alt="OCR evaluation graph visual" /><h2>Character-level accuracy</h2><p>Character Error Rate can show how far the recognized string is from the ground truth, which is more useful than only checking whether the output looks close.</p></article>
-        <article class="research-panel reveal"><img src="assets/enhancement.svg" alt="Image enhancement visual" /><h2>Motion and glare</h2><p>Blur and glare are not just visual issues. They can change character shapes enough to damage recognition before OCR starts.</p></article>
-        <article class="research-panel reveal"><img src="assets/ocr.svg" alt="OCR visual" /><h2>OCR pipeline</h2><p>The current system can use confidence filtering and fallback recognition settings. Future work could compare this against a CRNN-style model.</p></article>
-        <article class="research-panel reveal"><img src="assets/detection.svg" alt="Text detection visual" /><h2>System evaluation</h2><p>The best tests should measure the whole reading chain: capture quality, crop quality, OCR output, and whether the spoken result is actually useful.</p></article>
-      </div>
-    </section>
+
+    <section class="page-hero"><div class="container"><p class="kicker">Research</p><h1>Testing where camera OCR breaks.</h1><p class="page-lede">VisoraAI can be evaluated by studying blur, glare, distance, preprocessing, and OCR accuracy. The goal is to connect real visual conditions with measurable recognition outcomes.</p></div></section>
+    <section class="section"><div class="container module-grid">
+      <article class="module-card"><span class="number">01</span><h3>Motion blur</h3><p>Blur can smear character strokes and cause the OCR engine to confuse letters. Burst capture and frame selection are possible countermeasures.</p></article>
+      <article class="module-card"><span class="number">02</span><h3>Glare</h3><p>Reflections can erase strokes and reduce contrast. Detection can identify glare and trigger spoken guidance before OCR.</p></article>
+      <article class="module-card"><span class="number">03</span><h3>Character Error Rate</h3><p>CER compares recognized characters with ground truth, making OCR changes measurable instead of subjective.</p></article>
+    </div></section>
+    <section class="section alt"><div class="container section-head"><h2>A useful research question connects the user problem to a measurable system behavior.</h2><p>For example, burst stacking depth can be tested against OCR accuracy under controlled motion blur. That turns an accessibility problem into an experiment: how many frames help, when do they stop helping, and what tradeoff does the system make?</p></div></section>
+
   </main>
 
   <aside class="settings-panel" data-settings-panel aria-hidden="true">
@@ -55,19 +46,22 @@
         <button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button>
       </div>
       <div class="settings-controls">
-        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase contrast for text and surfaces.</small></span><b aria-hidden="true"></b></button>
         <button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button>
-        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable decorative movement and reveals.</small></span><b aria-hidden="true"></b></button>
       </div>
     </div>
   </aside>
+
+
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <p>Assistive camera-based reading through computer vision, OCR, and speech.</p>
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,147 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VisoraAI | Work</title>
-  <meta name="description" content="VisoraAI work-style project overview with clickable system deep dives." />
-  <meta name="theme-color" content="#0B0D0F" />
+  <title>VisoraAI | Assistive Vision Stack</title>
+  <meta name="description" content="VisoraAI is an assistive camera-based reading prototype that turns printed text into spoken audio." />
+  <meta name="theme-color" content="#f7fbff" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="top-banner">VisoraAI is a student-built assistive reading prototype. <a href="stack.html">Explore the stack →</a></div>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="VisoraAI home">
-        <span class="brand-mark" aria-hidden="true">V</span>
-        <span class="brand-name">VisoraAI</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
       <div class="nav-menu" data-nav-menu>
-        <a href="index.html" aria-current="page">Work</a>
-        <a href="system.html">System</a>
-        <a href="research.html">Research</a>
-        <a href="contact.html">Contact</a>
+        <a href="stack.html">Stack</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a>
         <button type="button" data-settings-open>Display</button>
       </div>
     </nav>
   </header>
+
   <main id="main-content">
+
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-main reveal">
-          <p class="eyebrow">Assistive computer vision</p>
-          <h1>Turning printed text into spoken access.</h1>
-          <p class="hero-copy">VisoraAI is a student-built camera reading prototype. It uses computer vision and OCR to find printed text, clean the camera frame, and read the result aloud.</p>
+        <div>
+          <p class="kicker"># Assistive reading stack</p>
+          <h1>Build a reading layer for printed text.</h1>
+          <p class="hero-lede">VisoraAI turns a camera view into spoken text. It combines capture, detection, enhancement, OCR recognition, guidance, and speech into one accessibility-focused system.</p>
           <div class="hero-actions">
-            <a class="button primary" href="system.html">View system map</a>
-            <a class="button secondary" href="research.html">Read research focus</a>
+            <a class="button button-primary" href="stack.html">Explore the stack</a>
+            <a class="button button-secondary" href="research.html">View research</a>
           </div>
         </div>
-        <div class="hero-side reveal">
-          <div class="system-poster">
-            <img src="assets/architecture.svg" alt="Diagram of VisoraAI camera to speech system" />
+        
+          <div class="stack-card" aria-label="Clickable VisoraAI assistive vision stack diagram">
+            <div class="stack-label"><span>Assistive vision stack</span><span>Prototype map</span></div>
+            <div class="orbit-system">
+              <div class="orbit-ring"></div>
+              <div class="orbit-ring"></div>
+              <a class="node n1" href="capture.html">Capture</a>
+              <a class="node n2" href="detection.html">Detect</a>
+              <a class="node n3" href="enhancement.html">Enhance</a>
+              <a class="node n4" href="recognition.html">Recognize</a>
+              <a class="node n5" href="speech.html">Speak</a>
+              <a class="node n6" href="guidance.html">Guide</a>
+              <div class="orbit-core">Printed text<br />to audio</div>
+            </div>
           </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head">
+        <h2>The economy of the interface: less screen, more access.</h2>
+        <div class="body-copy">
+          <p>VisoraAI is designed around one direct action: point the camera at printed text and listen. The website follows the same principle. Instead of using huge filler text or fake dashboards, the system is explained as a connected stack of practical modules.</p>
+          <p>Each module below can be opened for a deeper technical overview, including its purpose, failure modes, implementation direction, and future improvements.</p>
+        </div>
+      </div>
+      <div class="container module-grid">
+        <a class="module-card" href="capture.html"><span class="hint">Click for deeper analysis</span><span class="number">01</span><h3>Camera capture</h3><p>Live input, frame quality, device constraints, and capture stability.</p></a>
+        <a class="module-card" href="detection.html"><span class="hint">Click for deeper analysis</span><span class="number">02</span><h3>Page detection</h3><p>Finding the printed surface and separating useful text from the background.</p></a>
+        <a class="module-card" href="enhancement.html"><span class="hint">Click for deeper analysis</span><span class="number">03</span><h3>Enhancement</h3><p>Contrast, sharpening, blur checks, glare checks, and burst stacking.</p></a>
+        <a class="module-card" href="recognition.html"><span class="hint">Click for deeper analysis</span><span class="number">04</span><h3>OCR recognition</h3><p>Text extraction, confidence filtering, fallback OCR, and model direction.</p></a>
+        <a class="module-card" href="speech.html"><span class="hint">Click for deeper analysis</span><span class="number">05</span><h3>Speech output</h3><p>Turning recognized text into readable audio with pacing and chunking.</p></a>
+        <a class="module-card" href="guidance.html"><span class="hint">Click for deeper analysis</span><span class="number">06</span><h3>User guidance</h3><p>Audio feedback that helps the user adjust distance, angle, blur, and glare.</p></a>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split-benefits">
+        <div class="benefit-panel">
+          <h3>Why this system helps users</h3>
+          <ul>
+            <li>Printed text becomes reachable through audio rather than visual inspection.</li>
+            <li>The system can give positioning feedback when the camera view is poor.</li>
+            <li>The interaction can stay simple even when the underlying pipeline is technical.</li>
+            <li>Future versions can run on mobile or embedded hardware for everyday reading.</li>
+          </ul>
+        </div>
+        <div class="benefit-panel">
+          <h3>Why the stack matters</h3>
+          <ul>
+            <li>OCR accuracy depends on capture quality, not only the recognition engine.</li>
+            <li>Detection reduces background noise before recognition.</li>
+            <li>Enhancement improves text clarity under blur, glare, and weak contrast.</li>
+            <li>Speech and guidance turn recognition into an actual assistive experience.</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-intro reveal">
-          <h2>A project framework instead of a one-page filler site.</h2>
-          <p>The homepage now works like a portfolio index. Each system area is treated like a focused case study. Hover any item to reveal a prompt, then click for a deeper page.</p>
-        </div>
-        <div class="filter-bar reveal" aria-label="Filter project areas">
-          <button class="filter-button is-active" type="button" data-filter="all">All work</button>
-          <button class="filter-button" type="button" data-filter="vision">Vision</button>
-          <button class="filter-button" type="button" data-filter="ocr">OCR</button>
-          <button class="filter-button" type="button" data-filter="audio">Audio</button>
-          <button class="filter-button" type="button" data-filter="research">Research</button>
-        </div>
-        <div class="work-grid">
-
-          <a class="work-card reveal" href="capture.html" data-category="vision">
-            <div class="work-card-media">
-              <img src="assets/capture.svg" alt="Camera capture visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>01</span><span>Vision</span></div>
-              <h3>Camera capture</h3>
-              <p>Live camera input for printed text in real-world conditions.</p>
-            </div>
-          </a>
-
-          <a class="work-card reveal" href="detection.html" data-category="vision">
-            <div class="work-card-media">
-              <img src="assets/detection.svg" alt="Page + text detection visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>02</span><span>Vision</span></div>
-              <h3>Page + text detection</h3>
-              <p>Locating the page and readable text region before OCR begins.</p>
-            </div>
-          </a>
-
-          <a class="work-card reveal" href="enhancement.html" data-category="research vision">
-            <div class="work-card-media">
-              <img src="assets/enhancement.svg" alt="Enhancement layer visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>03</span><span>Image quality</span></div>
-              <h3>Enhancement layer</h3>
-              <p>Cleaning blur, glare, contrast, and frame quality before recognition.</p>
-            </div>
-          </a>
-
-          <a class="work-card reveal" href="recognition.html" data-category="ocr research">
-            <div class="work-card-media">
-              <img src="assets/ocr.svg" alt="Recognition pipeline visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>04</span><span>OCR</span></div>
-              <h3>Recognition pipeline</h3>
-              <p>Turning the enhanced crop into text with confidence-aware fallback logic.</p>
-            </div>
-          </a>
-
-          <a class="work-card reveal" href="speech.html" data-category="audio">
-            <div class="work-card-media">
-              <img src="assets/speech.svg" alt="Spoken output visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>05</span><span>Audio</span></div>
-              <h3>Spoken output</h3>
-              <p>Reading detected text aloud so the screen is not the final interface.</p>
-            </div>
-          </a>
-
-          <a class="work-card reveal" href="research.html" data-category="research">
-            <div class="work-card-media">
-              <img src="assets/research.svg" alt="Evaluation direction visual" />
-              <span class="hover-hint">Click for deeper analysis</span>
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-kicker"><span>06</span><span>Research</span></div>
-              <h3>Evaluation direction</h3>
-              <p>Testing OCR failure points such as motion blur, glare, and character error rate.</p>
-            </div>
-          </a>
-        </div>
+      <div class="container section-head">
+        <h2>Start with the part you want to understand.</h2>
+        <p>These pages replace the old scrolling layout with a Sui-inspired stack model: simple landing page, modular system map, and deeper pages for each technical layer.</p>
+      </div>
+      <div class="container start-grid">
+        <a class="start-item" href="stack.html"><span>Map</span><h3>System stack</h3><p>See the full pipeline and how the pieces connect.</p></a>
+        <a class="start-item" href="technology.html"><span>Build</span><h3>Technology</h3><p>Review the implementation architecture and tools.</p></a>
+        <a class="start-item" href="research.html"><span>Test</span><h3>Research</h3><p>Understand blur, glare, and OCR measurement.</p></a>
+        <a class="start-item" href="accessibility.html"><span>Access</span><h3>Accessibility</h3><p>See how the product goal shapes the interface.</p></a>
       </div>
     </section>
 
-    <section class="statement">
-      <div class="container reveal">
-        <p class="large-line">The best version of VisoraAI should feel like a real assistive technology case study, not a generic AI landing page.</p>
-      </div>
-    </section>
   </main>
 
   <aside class="settings-panel" data-settings-panel aria-hidden="true">
@@ -154,19 +122,22 @@
         <button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button>
       </div>
       <div class="settings-controls">
-        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase contrast for text and surfaces.</small></span><b aria-hidden="true"></b></button>
         <button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button>
-        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable decorative movement and reveals.</small></span><b aria-hidden="true"></b></button>
       </div>
     </div>
   </aside>
+
+
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <p>Assistive camera-based reading through computer vision, OCR, and speech.</p>
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

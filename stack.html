@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | VisoraAI</title>
-  <meta name="description" content="Contact and project links for VisoraAI." />
+  <title>Stack | VisoraAI</title>
+  <meta name="description" content="A clickable map of the VisoraAI capture, detection, enhancement, OCR, speech, and guidance stack." />
   <meta name="theme-color" content="#f7fbff" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
       <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
       <div class="nav-menu" data-nav-menu>
-        <a href="stack.html">Stack</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html" aria-current="page">Contact</a>
+        <a href="stack.html" aria-current="page">Stack</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a>
         <button type="button" data-settings-open>Display</button>
       </div>
     </nav>
@@ -28,8 +28,49 @@
 
   <main id="main-content">
 
-    <section class="page-hero"><div class="container"><p class="kicker">Contact</p><h1>Project links and next steps.</h1><p class="page-lede">Use this page for the GitHub repository, demo media, contact email, and project updates as VisoraAI develops.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/ARIHANTujjwal/VisoraAI" target="_blank" rel="noreferrer">View GitHub</a><a class="button button-secondary" href="mailto:hello@visoraai.com">hello@visoraai.com</a></div></div></section>
-    <section class="section"><div class="container section-head"><h2>What to add next.</h2><div class="body-copy"><p>The strongest version of this site needs real assets: a demo video, screenshots of the OCR result, a photo of the prototype setup, and a short explanation of your research results.</p><p>The structure is ready for those assets. Once you have them, they can replace the generated system visuals and make the project feel more complete.</p></div></div></section>
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Stack</p>
+        <h1>The VisoraAI assistive vision stack.</h1>
+        <p class="page-lede">The system is easier to understand as a stack: each layer reduces uncertainty before the final spoken output is delivered.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container hero-grid">
+        <div class="body-copy">
+          <p>This page is the central map. Click any module in the diagram to open a detailed analysis page. The goal is to make the project feel like a real technical product, not a single-page AI landing page.</p>
+          <p>The order matters. Camera capture affects detection. Detection affects enhancement. Enhancement affects OCR. OCR affects speech quality. Guidance closes the loop by helping the user improve the next frame.</p>
+        </div>
+        
+          <div class="stack-card" aria-label="Clickable VisoraAI assistive vision stack diagram">
+            <div class="stack-label"><span>Assistive vision stack</span><span>Prototype map</span></div>
+            <div class="orbit-system">
+              <div class="orbit-ring"></div>
+              <div class="orbit-ring"></div>
+              <a class="node n1" href="capture.html">Capture</a>
+              <a class="node n2" href="detection.html">Detect</a>
+              <a class="node n3" href="enhancement.html">Enhance</a>
+              <a class="node n4" href="recognition.html">Recognize</a>
+              <a class="node n5" href="speech.html">Speak</a>
+              <a class="node n6" href="guidance.html">Guide</a>
+              <div class="orbit-core">Printed text<br />to audio</div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container diagram-box">
+        <div class="pipeline-diagram">
+          <a href="capture.html"><span>01</span>Capture</a>
+          <a href="detection.html"><span>02</span>Detect</a>
+          <a href="enhancement.html"><span>03</span>Enhance</a>
+          <a href="recognition.html"><span>04</span>Recognize</a>
+          <a href="speech.html"><span>05</span>Speak</a>
+          <a href="guidance.html"><span>06</span>Guide</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 

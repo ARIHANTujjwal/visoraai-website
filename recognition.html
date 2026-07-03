@@ -4,55 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OCR Recognition | VisoraAI</title>
-  <meta name="description" content="OCR Recognition deep dive for VisoraAI." />
-  <meta name="theme-color" content="#0B0D0F" />
+  <meta name="description" content="The recognition layer converts the processed image into machine-readable text and decides whether the result is reliable enough to speak aloud." />
+  <meta name="theme-color" content="#f7fbff" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="top-banner">VisoraAI is a student-built assistive reading prototype. <a href="stack.html">Explore the stack →</a></div>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="VisoraAI home">
-        <span class="brand-mark" aria-hidden="true">V</span>
-        <span class="brand-name">VisoraAI</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
       <div class="nav-menu" data-nav-menu>
-        <a href="index.html">Work</a>
-        <a href="system.html" aria-current="page">System</a>
-        <a href="research.html">Research</a>
-        <a href="contact.html">Contact</a>
+        <a href="stack.html">Stack</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a>
         <button type="button" data-settings-open>Display</button>
       </div>
     </nav>
   </header>
+
   <main id="main-content">
+
     <section class="page-hero">
-      <div class="container deep-layout reveal">
-        <div class="deep-title">
-          <p class="eyebrow">Deep dive</p>
-          <h1>OCR Recognition</h1>
-        </div>
-        <div>
-          <p class="page-lede">OCR turns the enhanced crop into machine-readable text.</p>
-        </div>
+      <div class="container">
+        <p class="kicker">Deep dive</p>
+        <h1>OCR recognition layer.</h1>
+        <p class="page-lede">The recognition layer converts the processed image into machine-readable text and decides whether the result is reliable enough to speak aloud.</p>
       </div>
     </section>
     <section class="section">
-      <div class="container deep-layout">
-        <div class="deep-visual reveal"><img src="assets/ocr.svg" alt="OCR Recognition visual" /></div>
-        <div class="deep-copy reveal">
-          <p>This page is designed to become a deeper technical explanation as you add real screenshots, demo frames, and evaluation results. The current visual is a generated system diagram so the site does not need fake product screenshots.</p>
-          <p>Use this page to explain what the layer does, what can go wrong, and how VisoraAI handles the failure case.</p>
-          <div class="mini-specs"><div class="mini-spec"><span>Role</span><strong>Extracts characters and words from the prepared image.</strong></div>
-<div class="mini-spec"><span>Failure point</span><strong>Low confidence outputs should be rejected or retried.</strong></div>
-<div class="mini-spec"><span>Future work</span><strong>A CRNN-style model could be compared against the current OCR fallback system.</strong></div></div>
+      <div class="container detail-layout">
+        <nav class="detail-nav" aria-label="Page sections"><a href="#purpose">Purpose</a><a href="#implementation">Implementation direction</a><a href="#failure">Failure modes</a><a href="#future">Future improvements</a></nav>
+        <div class="detail-content"><section class="detail-block" id="purpose"><h2>Purpose</h2><p>OCR is the part users think of as “reading,” but it depends heavily on every layer before it. The recognition layer should extract text, filter weak results, and avoid speaking nonsense when confidence is low.</p><ul><li>Convert enhanced image crops into text.</li><li>Use confidence values to reject unreliable output.</li><li>Clean spacing and line breaks before speech.</li><li>Support fallback OCR settings when the first pass fails.</li></ul></section><section class="detail-block" id="implementation"><h2>Implementation direction</h2><p>The current direction can use Tesseract or a similar OCR backend as a practical fallback while experimenting with a custom CRNN-style model. Output should be normalized before speech so the result sounds natural.</p><ul><li>Run OCR on the best enhanced crop, not the raw frame.</li><li>Compare recognition confidence across preprocessing variants.</li><li>Normalize whitespace, punctuation, and line order.</li><li>Keep low-confidence output separate from confirmed readable output.</li></ul></section><section class="detail-block" id="failure"><h2>Failure modes</h2><p>OCR fails when characters are distorted, too small, blurred, or segmented incorrectly. It can also misread similar characters, such as O and 0, I and l, or rn and m.</p><ul><li>Small text can collapse into unreadable shapes.</li><li>Blur can merge adjacent characters.</li><li>Stylized fonts can confuse recognition.</li><li>Incorrect line ordering can make speech confusing.</li></ul></section><section class="detail-block" id="future"><h2>Future improvements</h2><p>The deeper research direction is a custom OCR model trained for the kinds of text and blur conditions VisoraAI expects. A CRNN with CTC decoding could be evaluated against Tesseract using Character Error Rate.</p><ul><li>Train on synthetic text images with controlled blur.</li><li>Evaluate CER across blur levels and burst depths.</li><li>Add a confidence threshold before speech output.</li><li>Test multilingual character sets after the English pipeline is stable.</li></ul></section>
+          <div class="diagram-box">
+            <div class="pipeline-diagram">
+              <a href="capture.html"><span>01</span>Capture</a>
+              <a href="detection.html"><span>02</span>Detect</a>
+              <a href="enhancement.html"><span>03</span>Enhance</a>
+              <a href="recognition.html"><span>04</span>Recognize</a>
+              <a href="speech.html"><span>05</span>Speak</a>
+              <a href="guidance.html"><span>06</span>Guide</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <aside class="settings-panel" data-settings-panel aria-hidden="true">
@@ -63,19 +63,22 @@
         <button class="close-button" type="button" data-settings-close aria-label="Close display settings">×</button>
       </div>
       <div class="settings-controls">
-        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase text and surface contrast.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-contrast aria-pressed="false"><span><strong>High contrast</strong><small>Increase contrast for text and surfaces.</small></span><b aria-hidden="true"></b></button>
         <button class="setting-toggle" type="button" data-toggle-text aria-pressed="false"><span><strong>Larger text</strong><small>Increase body and interface text size.</small></span><b aria-hidden="true"></b></button>
-        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable nonessential animation.</small></span><b aria-hidden="true"></b></button>
+        <button class="setting-toggle" type="button" data-toggle-motion aria-pressed="false"><span><strong>Reduce motion</strong><small>Disable decorative movement and reveals.</small></span><b aria-hidden="true"></b></button>
       </div>
     </div>
   </aside>
+
+
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VisoraAI</span></a>
+      <a class="brand" href="index.html" aria-label="VisoraAI home"><span class="brand-mark">V</span><span>VisoraAI</span></a>
       <p>Assistive camera-based reading through computer vision, OCR, and speech.</p>
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
