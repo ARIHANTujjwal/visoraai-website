@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research | VisoraAI</title>
-  <meta name="description" content="Research focus for VisoraAI OCR accuracy, blur, glare, and character error rate." />
+  <title>OCR Recognition | VisoraAI</title>
+  <meta name="description" content="OCR Recognition deep dive for VisoraAI." />
   <meta name="theme-color" content="#0B0D0F" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +22,8 @@
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
       <div class="nav-menu" data-nav-menu>
         <a href="index.html">Work</a>
-        <a href="system.html">System</a>
-        <a href="research.html" aria-current="page">Research</a>
+        <a href="system.html" aria-current="page">System</a>
+        <a href="research.html">Research</a>
         <a href="contact.html">Contact</a>
         <button type="button" data-settings-open>Display</button>
       </div>
@@ -31,18 +31,26 @@
   </header>
   <main id="main-content">
     <section class="page-hero">
-      <div class="container reveal">
-        <p class="eyebrow">Research</p>
-        <h1>OCR fails before the model ever sees clean text.</h1>
-        <p class="page-lede">VisoraAI is also a research prototype for testing how camera quality, motion blur, glare, and preprocessing affect recognition accuracy.</p>
+      <div class="container deep-layout reveal">
+        <div class="deep-title">
+          <p class="eyebrow">Deep dive</p>
+          <h1>OCR Recognition</h1>
+        </div>
+        <div>
+          <p class="page-lede">OCR turns the enhanced crop into machine-readable text.</p>
+        </div>
       </div>
     </section>
     <section class="section">
-      <div class="container research-grid">
-        <article class="research-panel reveal"><img src="assets/research.svg" alt="OCR evaluation graph visual" /><h2>Character-level accuracy</h2><p>Character Error Rate can show how far the recognized string is from the ground truth, which is more useful than only checking whether the output looks close.</p></article>
-        <article class="research-panel reveal"><img src="assets/enhancement.svg" alt="Image enhancement visual" /><h2>Motion and glare</h2><p>Blur and glare are not just visual issues. They can change character shapes enough to damage recognition before OCR starts.</p></article>
-        <article class="research-panel reveal"><img src="assets/ocr.svg" alt="OCR visual" /><h2>OCR pipeline</h2><p>The current system can use confidence filtering and fallback recognition settings. Future work could compare this against a CRNN-style model.</p></article>
-        <article class="research-panel reveal"><img src="assets/detection.svg" alt="Text detection visual" /><h2>System evaluation</h2><p>The best tests should measure the whole reading chain: capture quality, crop quality, OCR output, and whether the spoken result is actually useful.</p></article>
+      <div class="container deep-layout">
+        <div class="deep-visual reveal"><img src="assets/ocr.svg" alt="OCR Recognition visual" /></div>
+        <div class="deep-copy reveal">
+          <p>This page is designed to become a deeper technical explanation as you add real screenshots, demo frames, and evaluation results. The current visual is a generated system diagram so the site does not need fake product screenshots.</p>
+          <p>Use this page to explain what the layer does, what can go wrong, and how VisoraAI handles the failure case.</p>
+          <div class="mini-specs"><div class="mini-spec"><span>Role</span><strong>Extracts characters and words from the prepared image.</strong></div>
+<div class="mini-spec"><span>Failure point</span><strong>Low confidence outputs should be rejected or retried.</strong></div>
+<div class="mini-spec"><span>Future work</span><strong>A CRNN-style model could be compared against the current OCR fallback system.</strong></div></div>
+        </div>
       </div>
     </section>
   </main>

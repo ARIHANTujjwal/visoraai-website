@@ -1,27 +1,26 @@
-# VisoraAI Website
+# VisoraAI Clay-style framework
 
-Static multi-page website for VisoraAI.
+This is a static multi-page website package for VisoraAI.
 
-## Files
-
-- `index.html` — homepage
-- `system.html` — system pipeline
-- `technology.html` — technical architecture
-- `research.html` — research challenges
-- `accessibility.html` — accessibility approach
-- `roadmap.html` — future directions
-- `contact.html` — project links and missing content
-- `styles.css` — shared site styles
-- `script.js` — mobile nav and display settings
+## What changed
+- Clay-style work/case-study framework instead of one long filler page
+- Separate system deep-dive pages
+- Hover hints on project tiles
+- Generated SVG system visuals in `assets/`
+- Scroll reveal animation
+- Display settings drawer for high contrast, large text, and reduced motion
 
 ## Preview locally
-
 ```bash
 python3 -m http.server 3000
 ```
+Then open `http://localhost:3000`.
 
-Open `http://localhost:3000`.
+## Push live
+```bash
+git add .
+git commit -m "Rebuild VisoraAI Clay-style framework"
+git push
+```
 
-## Deploy
-
-Push these files to the root of the `visoraai-website` GitHub repo. Vercel should redeploy automatically.
+Replace generated SVGs with real screenshots/demo media when available.
